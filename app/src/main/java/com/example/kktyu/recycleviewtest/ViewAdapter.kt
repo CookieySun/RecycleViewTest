@@ -1,17 +1,18 @@
 package com.example.kktyu.recycleviewtest
 
-import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
 
-class ViewAdapter(private val list: List<RowModel>, private val listener: ListListener) : RecyclerView.Adapter<HomeViewHolder>() {
+class ViewAdapter(private val list: List<RowModel>, private val listener: ListListener) :
+    androidx.recyclerview.widget.RecyclerView.Adapter<HomeViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
         Log.d("Life Cycle", "onCreateViewHolder")
-        val rowView: View = LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
+        val rowView: View =
+            LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
         return HomeViewHolder(rowView)
     }
 
